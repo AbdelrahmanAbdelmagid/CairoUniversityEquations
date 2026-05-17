@@ -1,0 +1,295 @@
+\documentclass[12pt]{report}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[fleqn]{amsmath}
+\usepackage{graphicx}
+\usepackage[Conny]{fncychap}
+%\usepackage{amd}
+\usepackage{titlesec}
+\usepackage{graphicx}
+%\input{theorems.tex}
+\usepackage{hyperref}
+%\usepackage[colorinlistoftodos]{todonotes}
+%\usepackage{setspace}
+\usepackage[margin=1.6cm]{geometry}
+%\usepackage{braket}
+%\usepackage{calligra}
+%\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+%\usepackage{amsmath}
+\usepackage{cleveref}
+\usepackage[most]{tcolorbox}
+% Define custom colors
+\definecolor{defscol}{HTML}{ecd8d7} %For definitions
+\definecolor{asumscol}{HTML}{ecd8d7} %For Assumptions
+
+\definecolor{rmkscol}{HTML}{313160} %For remarks
+\definecolor{exmscol}{HTML}{e04b52} %For examples
+
+\definecolor{lemscol}{HTML}{2c3943} %For Lemmes
+\definecolor{thmscol}{HTML}{595765} %For Theorems
+\definecolor{prpscol}{HTML}{9c98b1} %For proposition
+\definecolor{corscol}{HTML}{dfd9fd} %For corrolaries
+
+\definecolor{clmscol}{HTML}{165c58} %For claims
+\definecolor{facscol}{HTML}{28a8a1} %For facts
+% ============================
+% Theorem
+% ============================
+\newtcbtheorem{theorem}{Theorem}
+{
+	enhanced,
+	frame hidden,
+	titlerule=0mm,
+	toptitle=1mm,
+	bottomtitle=1mm,
+	fonttitle=\bfseries\large,
+	coltitle=black,
+	colbacktitle=thmscol!40!white,
+	colback=thmscol!20!white,
+}{thm}
+
+\NewDocumentCommand{\thm}{m+m}{
+	\begin{theorem}{#1}{}
+		#2
+	\end{theorem}
+}
+
+\NewDocumentCommand{\thmr}{mm+m}{
+	\begin{theorem}{#1}{#2}
+		#3
+	\end{theorem}
+}
+
+\newenvironment{thmpf}{
+	{\noindent{\it \textbf{Proof for Theorem.}}}
+	\tcolorbox[blanker,breakable,left=5mm,parbox=false,
+	before upper={\parindent15pt},
+	after skip=10pt,
+	borderline west={1mm}{0pt}{thmscol!40!white}]
+}{
+	\textcolor{thmscol!40!white}{\hbox{}\nobreak\hfill$\blacksquare$} 
+	\endtcolorbox
+}
+
+\NewDocumentCommand{\thmp}{m+m+m}{
+	\begin{mytheorem}{#1}{}
+		#2
+	\end{mytheorem}
+	
+	\begin{thmpf}
+		#3
+	\end{thmpf}
+}
+
+\begin{document}
+
+\begin{titlepage}
+	\newcommand{\HRule}{\rule{\linewidth}{0.7mm}} % Defines a new command for the horizontal lines, change thickness here
+	
+	\raggedright\includegraphics[width=3.9cm]{logo1.png}
+	\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+	\includegraphics[width=3.29cm]{logo.png} 
+	\ 		\\[0.5cm]
+	\centering
+
+\textsc{\LARGE Cairo University }\\[0.2cm]
+\textsc{\Large Faculty of Science}\\[0.1cm] 
+\textsc{\large Physics Department}\\[-0.2cm]
+\HRule \\[0.4cm]
+{ \huge \bfseries Equations Useful for Undergrad Physics Students}\\[0.4cm] 
+\HRule \\[9cm]
+ 
+\Large \emph{Author:}\\Abd-ElRahman \textsc{Mostafa} \\[3cm]
+
+\end{titlepage}
+\begin{abstract}	\centering
+	These are the Equations and Relations that i needed during studying in the Physics Departement as an undergrad student, I had problems memorizimg most of these.
+\end{abstract}
+\tableofcontents
+\label{toc}
+\chapter{Vectors}
+\begin{equation}
+\vec{A}\times\vec{B}\times\vec{C}=\vec{B}(A.C)-\vec{C}(A.B)\\
+\\ \underline{\title{\textbf{\boldmath \large Nabla}}}
+\end{equation}\\
+\underline{\Large Line Element in different co-ordinates:-}
+\\in Cartisian co-ordinates: 
+\begin{equation}
+	dl^2=dx^2+dy^2+dz^2
+\end{equation}
+in Cylinderical co-ordinates:
+\begin{equation}
+	dl^2=dr^2+r^2d\phi^2+dz^2
+\end{equation}
+in spherical Co-ordiantes
+\begin{equation}
+	dl^2=dr^2+r^2d\theta^2+r^2\sin^2\theta d\phi^2
+\end{equation}
+\chapter{Trigonometry}
+\large
+\begin{equation}
+	Sin(\alpha\pm\beta) = Sin (\alpha) Cos (\beta)\pm Cos (\alpha) Sin (\beta)
+\end{equation}
+\begin{equation}
+	Cos(\alpha\pm\beta)= Cos (\alpha)Cos(\beta)\mp Sin(\alpha) Sin(\beta)
+\end{equation}
+
+\begin{equation}
+Sin(\alpha)Cos(\beta)=\frac{1}{2}[Sin(\alpha+\beta)+Sin(\alpha-\beta)]
+\end{equation}
+\begin{equation}
+	Cos(\alpha)Cos(\beta)=\frac{1}{2}[Cos(\alpha+\beta)+Cos(\alpha+\beta)]
+\end{equation}
+\begin{equation}
+Sin(\alpha)Sin(\beta)=\frac{1}{2}[Cos(\alpha-\beta)-Cos(\alpha+\beta)]
+\end{equation}
+\begin{equation}
+Sin^2\alpha=\frac{1}{2}[1-Cos2\alpha]
+\end{equation}
+\begin{equation}
+Cos^2\alpha=\frac{1}{2}[1+Cos2\alpha]
+\end{equation}
+\begin{equation}
+	2 Sin x Cos x = Sin 2x
+\end{equation}
+
+\begin{equation}
+  Sin x=\frac{e^{ix}-e^{-ix}}{2i}
+\end{equation}
+\begin{equation}
+Cos x=\frac{e^{ix}+e^{-ix}}{2}
+\end{equation}
+
+\begin{equation}
+\int_{0}^{\pi} Sin(\frac{n\pi}{a}x)Sin(\frac{n'\pi}{a}x) dx =\delta_{n n'}
+\end{equation}
+\newpage
+\underline{Trignometric Differentiation}
+\begin{equation}
+	\frac{d}{dx} \ Sin\ x= Cos\ x
+\end{equation}
+\begin{equation}
+	\frac{d}{dx} \ Cos \ x= - Sin\ x
+\end{equation}
+\begin{equation}
+	\frac{d}{dx} \ Tan \ x= Sec^2\ x
+\end{equation}
+\begin{equation}
+	\frac{d}{dx} \ Csc \ x= -Csc\ x \ Cot\ x
+\end{equation}
+\begin{equation}
+	\frac{d}{dx} \ Sec \ x= Sec\ x\ Tan \ x
+\end{equation}
+\begin{equation}
+	\frac{d}{dx} \ Cot x= -Csc^2\ x
+\end{equation}\label{dtri}
+
+
+\chapter{Hyperbolic Functions}
+\begin{equation}Sinh x= \frac{e^x-e^{-x}}{2}
+\end{equation}
+\begin{equation}
+Cosh x= \frac{e^x+e^{-x}}{2} 
+\end{equation}
+\begin{equation}
+Tanh x= \frac{e^x-e^{-x}}{e^x+e^{-x}}
+\end{equation}
+\begin{equation}
+	\frac{\partial }{\partial x}(Cosh(x))=Sinh(x)
+\end{equation}
+\begin{equation}
+	\frac{\partial }{\partial x}(Sinh(x))=Cosh(x)
+\end{equation}
+\begin{equation}
+	\frac{\partial }{\partial x}(Tanh(x))=Sech^2 (x)
+\end{equation}
+\begin{equation}
+	\frac{\partial }{\partial x}(Sech(x))=-Sech(x)Tanh(x)
+\end{equation}
+\begin{equation}
+	\frac{\partial }{\partial x}(Csch(x))=-Coth(x)Csch(x)
+\end{equation}
+\begin{equation}
+	\frac{\partial }{\partial x}(Coth(x))=-Csch^2(x)
+\end{equation}
+\chapter{Differentiation}
+\begin{equation}
+	y=\frac{u}{v}  \\\ \longrightarrow \\\ \frac{dy}{dx}=\frac{v u'-u v'}{v^2}
+\end{equation}
+\hyperref[dtri]{\underline{Trignometric Differentiation}}
+
+
+\chapter{Expantions}
+ \thmr{Theorem Name}{1}{
+	     A theorem.
+	 }
+	 
+\chapter{Functional}
+
+\Large
+\begin{equation}
+\frac{\delta F}{\delta f(x)}=lim_{\epsilon \to 0} \frac{F[f(x)+\epsilon\delta(x-x')]-F[f(x)]}{\epsilon}
+\end{equation}
+\begin{equation}
+J[x]=\int f^p(x)\phi (x)\ dx \ \ \ \ \  \longrightarrow  \frac{\delta\ J}{\delta\ f(x_o)}=P[f(x_o)]^{p-1}\phi (x_o)
+\end{equation}
+\begin{equation}
+	 H[f(x)]= \int g[f(x)]\ dx \ \ \  \longrightarrow \frac{\delta H}{\delta f(x_o)}=g'(f(x_o)) 
+\end{equation}
+\begin{equation}	 
+J[f]=\int g(f'(y))\ dy\ \ \ \ \ \ \longrightarrow \frac{\delta J}{\delta f(x_o)}=-\frac{1}{dx}(\frac{d\ g(f')}{d\ f'(x)})
+\end{equation}
+\begin{equation}
+J[f]=\int (\frac{\partial f}{\partial y})^2\ dy  \ \  \ \ \  \ \ \ \ \longrightarrow \frac{\delta J}{\delta f(x_o)}=-2 \frac{\partial^2 f}{\partial y^2}
+\end{equation}
+\begin{equation}
+G[f]=\int g(y,f)dy \ \ \ \ \ \ \ \longrightarrow \frac{\delta H}{\delta f(x_o)}=\frac{\partial\ g(x,f)}{\partial f(x)} 
+\end{equation}
+\Large
+
+\begin{equation}
+J[f]=\int g(y,f,f',f'') \ dy \ \longrightarrow \frac{\delta J}{\delta f(x_o)}=\frac{\partial g}{\partial f}-\frac{d}{dx}(\frac{\partial\ g}{\partial f(x)})+\frac{d^2}{d x^2}(\frac{\partial g}{\partial f''})
+\end{equation}
+\chapter{Maxwell Equation}
+\begin{equation}
+%\nabla . E = \huge\frac{\rho}{\epsilon_o} \ \ \ \ \ \ \ \ \ \ \ \ \ \text{"Conservation of Charge"}
+\end{equation}
+\begin{equation}
+\nabla \times$E=-$\frac{\partial B}{\partial t}
+\end{equation}
+\begin{equation}
+\nabla. B=0
+\end{equation}
+\begin{equation}
+\nabla \times B= \mu_o J$ +{$\frac{1}{ c^2}$}$ {\frac{\partial E}{\partial t}}
+\end{equation}
+
+\chapter{Gamma Functions}
+\begin{equation}
+	\Gamma(x)=\int_{0}^{\infty}t^{x-1}e^{-t} \ dt
+\end{equation}
+\begin{equation}
+	\Gamma(n)=(n-1)!
+\end{equation}
+\begin{equation}
+	\Gamma(\frac{1}{2})=\sqrt{\pi}
+\end{equation}
+\begin{equation}
+	\int ln(x)\ dx =xln(x)-x \\
+	ln N! =N ln N -N 
+\end{equation}
+\begin{equation}
+	\int_{-\infty}^{\infty} e^{-\alpha x^2}=\sqrt{\frac{\pi}{\alpha}}
+\end{equation}
+\begin{equation}
+	\int_{-\infty}^{\infty} x^n e^{-\alpha x^2} = \begin{cases}
+		\frac{1}{2}(\frac{1}{\alpha})^{n+1} n! & n=1,2,3..... \\
+		\frac{1}{2} (\frac{1}{\alpha})^{\frac{2n+1}{2}} \Gamma(n+\frac{1}{2}) & n= \frac{1}{2},\frac{3}{2},\frac{5}{2},....
+	\end{cases}
+\end{equation}
+\chapter{Essential Series }
+\begin{equation}
+	\sum_{n=0}^{N-1}e^{i n x}=\frac{1-e^{iNx}}{1-e^{ix}} 
+\end{equation}
+\end{document}
