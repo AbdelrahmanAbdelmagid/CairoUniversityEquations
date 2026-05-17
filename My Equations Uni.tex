@@ -1,12 +1,33 @@
-\documentclass[12pt]{report}
+\documentclass[fleqn, 14pt]{extarticle} % <-- Add 'fleqn' here
+
+\usepackage{amsmath}
+\setlength{\mathindent}{0pt}   % <-- Sets the left indent to zero
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[fleqn]{amsmath}
+\usepackage[T1]{fontenc}
+
+% Adjust margins to match standard academic formatting
+% Package for handling math if needed later
+\usepackage{amsmath, amssymb}
+%\usepackage[fleqn]{amsmath}
 \usepackage{graphicx}
-\usepackage[Conny]{fncychap}
+%\usepackage[Glenn]]{fncychap}
+%\usepackage{times}      % Times for text, math uses similar font
+% OR
+\usepackage{mathptmx}
 %\usepackage{amd}
-\usepackage{titlesec}
-\usepackage{graphicx}
+%\usepackage{titlesec}
+% Change section font size and style
+%\titleformat{\section}
+%{\Large\bfseries\fontseries{bx}\selectfont\raggedright}  % \RaggedRight prevents over-stretching
+%{\thesection}
+%{1em}   
+%{}               % Code before title
+%\titleformat{\subsection}
+%{\Large\bfseries\raggedright}%over-stretching
+%{\thesubsection}
+%{1em}
+%{}
 %\input{theorems.tex}
 \usepackage{hyperref}
 %\usepackage[colorinlistoftodos]{todonotes}
@@ -82,39 +103,47 @@
 	\end{thmpf}
 }
 
+
 \begin{document}
 
 \begin{titlepage}
-	\newcommand{\HRule}{\rule{\linewidth}{0.7mm}} % Defines a new command for the horizontal lines, change thickness here
-	
-	\raggedright\includegraphics[width=4.44cm]{logo1.png}
-	\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
-	\includegraphics[width=3.29cm]{logo.png} 
-	\ 		\\[0.5cm]
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+	\raggedleft
+\begin{minipage}{13.64cm}
+\raggedright\includegraphics[height=4.4cm]{logo1.png}
+\end{minipage}
+\begin{minipage}{4.5cm}
+	\raggedright 
+\ \ \ \ \ \ \	\includegraphics[height=4.4cm]{logo.png} 
+\end{minipage}
+			\\[1.5cm]
 	\centering
 
-\textsc{\LARGE Cairo University }\\[0.2cm]
-\textsc{\Large Faculty of Science}\\[0.1cm] 
-\textsc{\large Physics Department}\\[-0.2cm]
-\HRule \\[0.4cm]
+\textsc{\Huge Cairo University }\\[0.2cm]
+\textsc{\huge Faculty of Science}\\[0.1cm] 
+\textsc{\Large Physics Department}\\[-0.2cm]
+\HRule \\[1cm]
 { \huge \bfseries Equations Useful for Undergrad Physics Students}\\[0.4cm] 
 \HRule \\[9cm]
  
-\Large \emph{Author:}\\Abd-ElRahman \textsc{Mostafa} \\[3cm]
+\Large \emph{Author:}\ Abdelrahman M. \textsc{Abdelmagid} \\[3cm]
 
 \end{titlepage}
-\begin{abstract}	\centering
-	These are the Equations and Relations that i needed during studying in the Physics Departement as an undergrad student, I had problems memorizimg most of these.
-\end{abstract}
 \tableofcontents
 \label{toc}
-\chapter{Vectors}
+\newpage
+\raggedright
+\section{\textsc{abstract}}
+	These are the Equations and Relations that i needed during studying in the Physics Departement as an undergrad student, I had problems memorizimg most of these.
+\section{\textsc{Vectors}}
+
 \begin{equation}
-\vec{A}\times\vec{B}\times\vec{C}=\vec{B}(A.C)-\vec{C}(A.B)\\
-\\ \underline{\title{\textbf{\boldmath \large Nabla}}}
-\end{equation}\\
-\underline{\Large Line Element in different co-ordinates:-}
-\\in Cartisian co-ordinates: 
+\vec{A}\times\vec{B}\times\vec{C}=\vec{B}(A.C)-\vec{C}(A.B) 
+ \underline{\title{\textbf{\boldmath \large Nabla}}}
+\end{equation}
+
+\subsection{\textsc{Line Elements}}
+in Cartisian co-ordinates: 
 \begin{equation}
 	dl^2=dx^2+dy^2+dz^2
 \end{equation}
@@ -126,7 +155,7 @@ in spherical Co-ordiantes
 \begin{equation}
 	dl^2=dr^2+r^2d\theta^2+r^2\sin^2\theta d\phi^2
 \end{equation}
-\chapter{Trigonometry}
+\section{\textsc{Trigonometry}}
 \large
 \begin{equation}
 	Sin(\alpha\pm\beta) = Sin (\alpha) Cos (\beta)\pm Cos (\alpha) Sin (\beta)
@@ -165,7 +194,7 @@ Cos x=\frac{e^{ix}+e^{-ix}}{2}
 \int_{0}^{\pi} Sin(\frac{n\pi}{a}x)Sin(\frac{n'\pi}{a}x) dx =\delta_{n n'}
 \end{equation}
 \newpage
-\underline{Trignometric Differentiation}
+\subsection{Trignometric Differentiation}
 \begin{equation}
 	\frac{d}{dx} \ Sin\ x= Cos\ x
 \end{equation}
@@ -186,7 +215,7 @@ Cos x=\frac{e^{ix}+e^{-ix}}{2}
 \end{equation}\label{dtri}
 
 
-\chapter{Hyperbolic Functions}
+\section{\textsc{Hyperbolic Functions}}
 \begin{equation}Sinh x= \frac{e^x-e^{-x}}{2}
 \end{equation}
 \begin{equation}
@@ -213,19 +242,19 @@ Tanh x= \frac{e^x-e^{-x}}{e^x+e^{-x}}
 \begin{equation}
 	\frac{\partial }{\partial x}(Coth(x))=-Csch^2(x)
 \end{equation}
-\chapter{Differentiation}
+\section{\textsc{Differentiation}}
 \begin{equation}
-	y=\frac{u}{v}  \\\ \longrightarrow \\\ \frac{dy}{dx}=\frac{v u'-u v'}{v^2}
+	y=\frac{u}{v}   \longrightarrow \frac{dy}{dx}=\frac{v u'-u v'}{v^2}
 \end{equation}
 \hyperref[dtri]{\underline{Trignometric Differentiation}}
 
 
-\chapter{Expantions}
+\section{Expantions}
  \thmr{Theorem Name}{1}{
 	     A theorem.
 	 }
 	 
-\chapter{Functional}
+\section{Functional}
 
 \Large
 \begin{equation}
@@ -251,7 +280,7 @@ G[f]=\int g(y,f)dy \ \ \ \ \ \ \ \longrightarrow \frac{\delta H}{\delta f(x_o)}=
 \begin{equation}
 J[f]=\int g(y,f,f',f'') \ dy \ \longrightarrow \frac{\delta J}{\delta f(x_o)}=\frac{\partial g}{\partial f}-\frac{d}{dx}(\frac{\partial\ g}{\partial f(x)})+\frac{d^2}{d x^2}(\frac{\partial g}{\partial f''})
 \end{equation}
-\chapter{Maxwell Equation}
+\section{Maxwell Equation}
 \begin{equation}
 %\nabla . E = \huge\frac{\rho}{\epsilon_o} \ \ \ \ \ \ \ \ \ \ \ \ \ \text{"Conservation of Charge"}
 \end{equation}
@@ -265,7 +294,7 @@ J[f]=\int g(y,f,f',f'') \ dy \ \longrightarrow \frac{\delta J}{\delta f(x_o)}=\f
 \nabla \times B= \mu_o J$ +{$\frac{1}{ c^2}$}$ {\frac{\partial E}{\partial t}}
 \end{equation}
 
-\chapter{Gamma Functions}
+\section{Gamma Functions}
 \begin{equation}
 	\Gamma(x)=\int_{0}^{\infty}t^{x-1}e^{-t} \ dt
 \end{equation}
@@ -276,7 +305,7 @@ J[f]=\int g(y,f,f',f'') \ dy \ \longrightarrow \frac{\delta J}{\delta f(x_o)}=\f
 	\Gamma(\frac{1}{2})=\sqrt{\pi}
 \end{equation}
 \begin{equation}
-	\int ln(x)\ dx =xln(x)-x \\
+	\int ln(x)\ dx =xln(x)-x 
 	ln N! =N ln N -N 
 \end{equation}
 \begin{equation}
@@ -288,7 +317,7 @@ J[f]=\int g(y,f,f',f'') \ dy \ \longrightarrow \frac{\delta J}{\delta f(x_o)}=\f
 		\frac{1}{2} (\frac{1}{\alpha})^{\frac{2n+1}{2}} \Gamma(n+\frac{1}{2}) & n= \frac{1}{2},\frac{3}{2},\frac{5}{2},....
 	\end{cases}
 \end{equation}
-\chapter{Essential Series }
+\section{Essential Series }
 \begin{equation}
 	\sum_{n=0}^{N-1}e^{i n x}=\frac{1-e^{iNx}}{1-e^{ix}} 
 \end{equation}

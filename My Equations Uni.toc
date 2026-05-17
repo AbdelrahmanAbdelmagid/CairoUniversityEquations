@@ -1,10 +1,13 @@
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {1}Vectors}{2}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Trigonometry}{3}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Hyperbolic Functions}{6}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Differentiation}{7}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Expantions}{8}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Functional}{9}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Maxwell Equation}{10}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Gamma Functions}{11}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Essential Series }{12}{chapter.9}%
+\contentsline {section}{\numberline {1}\textsc {abstract}}{2}{section.1}%
+\contentsline {section}{\numberline {2}\textsc {Vectors}}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}\textsc {Line Elements}}{2}{subsection.2.1}%
+\contentsline {section}{\numberline {3}\textsc {Trigonometry}}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Trignometric Differentiation}{4}{subsection.3.1}%
+\contentsline {section}{\numberline {4}\textsc {Hyperbolic Functions}}{4}{section.4}%
+\contentsline {section}{\numberline {5}\textsc {Differentiation}}{5}{section.5}%
+\contentsline {section}{\numberline {6}Expantions}{5}{section.6}%
+\contentsline {section}{\numberline {7}Functional}{6}{section.7}%
+\contentsline {section}{\numberline {8}Maxwell Equation}{6}{section.8}%
+\contentsline {section}{\numberline {9}Gamma Functions}{7}{section.9}%
+\contentsline {section}{\numberline {10}Essential Series }{8}{section.10}%
